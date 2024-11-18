@@ -1,0 +1,343 @@
+/* General Reset and Body Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Section Container */
+.section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    margin-bottom: 40px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* About Section */
+.about-section {
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* About Text */
+.about-text {
+    text-align: left;
+    padding: 20px;
+    font-size: 1.1em;
+}
+
+.about-text h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.about-text h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    color: #444;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.about-text ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-text ul li {
+    margin-bottom: 10px;
+}
+
+.about-text ul li strong {
+    color: #222;
+}
+
+/* Image Section */
+.image-placeholder {
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.image-placeholder h2 {
+    position: absolute;
+    top: 20px;  
+    left: 20px;
+    color: #fff;
+    font-size: 2em; 
+    background-color: rgba(0, 0, 0, 0.4);  
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;  
+}
+.image-placeholder .image-caption {
+    font-size: 1.1em;
+    color: #ddd;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    transition: background-color 0.3s ease;
+}
+.image-placeholder:hover .image-caption {
+    background-color: rgb(0, 0, 0);
+}
+
+.image-placeholder:hover img {
+    transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+    /* Adjustments for tablets and smaller screens */
+    .section-container {
+        flex-direction: column;
+        padding: 30px 15px;
+    }
+
+    .about-text h2 {
+        font-size: 1.8em;
+    }
+
+    .about-text h3 {
+        font-size: 1.4em;
+    }
+
+    .image-placeholder h2 {
+        font-size: 1.8em;
+    }
+}
+
+@media (max-width: 992px) {
+    /* More adjustments for smaller screens like laptops */
+    .section-container {
+        flex-direction: column;
+        padding: 25px 10px;
+    }
+
+    .about-text h2 {
+        font-size: 1.7em;
+    }
+
+    .about-text h3 {
+        font-size: 1.3em;
+    }
+
+    .image-placeholder h2 {
+        font-size: 1.7em;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Mobile screen styles */
+    .section-container {
+        flex-direction: column;
+        padding: 15px 10px;
+    }
+
+    .about-text {
+        text-align: center;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .about-text h2 {
+        font-size: 1.8em;
+    }
+
+    .about-text h3 {
+        font-size: 1.3em;
+    }
+
+    .about-text ul {
+        padding-left: 20px;
+        font-size: 1em;
+    }
+
+    .about-text ul li {
+        margin-bottom: 15px;
+    }
+
+    .image-placeholder h2 {
+        font-size: 1.5em;
+    }
+
+    .image-placeholder {
+        max-width: 100%; /* Ensure full-width image container on smaller devices */
+        margin: 15px 0; /* Space between image and text */
+    }
+}
+
+/* Smaller devices such as mobile phones */
+@media (max-width: 480px) {
+    .section-container {
+        padding: 10px 5px;
+    }
+
+    .about-text h2 {
+        font-size: 1.6em;
+    }
+
+    .about-text h3 {
+        font-size: 1.2em;
+    }
+
+    .about-text ul {
+        padding-left: 20px;
+    }
+
+    .image-placeholder h2 {
+        font-size: 1.3em;
+    }
+
+    .image-placeholder .image-caption {
+        font-size: 1em; /* Adjust font size for very small screens */
+    }
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.footer.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-image {
+    margin-bottom: 10px; 
+    display: block; 
+    text-align: center; 
+}
+.footer-image img {
+    width: 50px; 
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    transition: transform 0.3s ease; 
+}
+.footer-image img:hover {
+    transform: scale(1.1); 
+}
+
+/* Keyframe Animations for Fade-in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.image-placeholder {
+    max-width: 800px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-placeholder:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    object-fit: cover;
+}
+
+.image-placeholder h2 {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 1.8em;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.image-placeholder .image-caption {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.6;
+}

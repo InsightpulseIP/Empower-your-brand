@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Consultation</title>
+    <link rel="stylesheet" href="GetStartedBooking.css"> 
+</head>
+<body>
+
+    <div class="container">
+        <!-- Introduction Section -->
+        <div class="intro">
+            <h1>Discover the Power of Data-Driven Decisions</h1>
+            <p>Our tailored solution turns complex data into clear strategies that drive results, helping you stay ahead of the competition and connect deeply with your audience.</p>
+        </div>
+
+       <!-- Booking Form Section -->
+<div class="form-section">
+    <h2>Book Your Free Consultation</h2>
+    <p>Let’s discuss how we can unlock the potential of your data to elevate your business. Fill out the form below, and we'll be in touch to confirm your appointment.</p>
+    
+    <form action="/submit-booking" method="post" id="bookingForm">
+        <div class="form-group">
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">Phone Number <span class="required">*</span></label>
+            <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+        </div>
+        
+        <div class="form-group">
+            <label for="business">Business Name</label>
+            <input type="text" id="business" name="business" placeholder="Enter your business name">
+        </div>
+        
+        <div class="form-group">
+            <label for="date">Preferred Consultation Date <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Tell Us About Your Goals</label>
+            <textarea id="message" name="message" rows="4" placeholder="What would you like to achieve?"></textarea>
+        </div>
+        
+        <div class="form-group">
+            <button type="button" class="cta-button" id="bookNowButton">Book Now</button>
+        </div>
+    
+        <!-- Link to external JavaScript file -->
+        <script src="BookingConfirmation.js"></script>
+    </form>
+</div>
+</div>
+
+</body>
+</html>
