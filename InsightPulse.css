@@ -114,6 +114,7 @@ body::before {
     width: 30px; /* Adjust logo size inside the button */
     height: 30px;
     border-radius: 50%; /* Ensures the logo is circular */
+    object-fit: cover;
 }
 
 .navbar-toggle:hover {
