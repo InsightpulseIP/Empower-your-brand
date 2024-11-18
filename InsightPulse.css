@@ -105,34 +105,32 @@ body::before {
     position: absolute; 
     top: 10px; 
     left: 10px; 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
-    z-index: 101; /* Ensures it stays on top */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+    z-index: 101;
     transition: background 0.3s ease;
 }
 
 .navbar-toggle img {
-    width: 30px; /* Adjust logo size inside the button */
+    width: 30px; 
     height: 30px;
-    border-radius: 50%; /* Ensures the logo is circular */
+    border-radius: 50%; 
     object-fit: cover;
 }
 
 .navbar-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.4); /* Highlight on hover */
-}
+    background-color: rgba(255, 255, 255, 0.4); 
 
 /* Responsive settings for phone users */
 @media (max-width: 768px) {
     .navbar-toggle {
-        display: flex; /* Visible only for smaller screens */
+        display: flex; 
     }
 
     .navbar-links {
-        display: none; /* Links hidden by default */
+        display: none; 
         flex-direction: column;
         position: absolute;
-        top: 50px; /* Below the navbar */
-        left: 0;
+        top: 50px; 
         width: 50%;
         background-color: rgba(0, 0, 0, 0.8);
         padding-top: 10px;
@@ -140,7 +138,7 @@ body::before {
     }
 
     .navbar-links.active {
-        display: flex; /* Display links when toggled */
+        display: flex; 
     }
 }
 
