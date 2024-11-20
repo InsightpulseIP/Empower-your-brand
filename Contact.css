@@ -239,3 +239,11 @@ html, body {
         font-size: 7px;
     }
 }
+/* Quotes Section*/
+.contact-card .quote {
+    font-size: 16px;
+    color: rgb(255, 255, 255);  
+    font-style: italic; 
+    text-shadow: 2px 2px 4px rgb(0, 0, 0); 
+    margin-bottom: 10px; 
+}
