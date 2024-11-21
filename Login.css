@@ -45,7 +45,6 @@ body, html {
     background-repeat: no-repeat;
     position: relative;
     box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.4);
-    animation: slideInLeft 1.2s ease-out, backgroundMove 10s linear infinite alternate;
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -132,8 +131,8 @@ h2 {
 .signup-link {
     margin-top: 20px;
     text-align: left;
-    color: #000000;
-    text-shadow: black;
+    color: #fffefe;
+    text-shadow: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 14px;
 }
