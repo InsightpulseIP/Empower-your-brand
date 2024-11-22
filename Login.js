@@ -1,6 +1,7 @@
 
 const accounts = [
-    { email: "admin@gmail.com", password: "jaydarwin@", role: "admin" },
+    { email: "admin@gmail.com", password:"admin12345", role: "admin"},
+    { email: "jaydarwinsangalang@gmail.com", password: "jaydarwin@", role: "user" },
     { email: "johnmarkinramos@gmail.com", password: "09483405224", role: "user" },
     { email: "javierleunice@gmail.com", password: "09100256299", role: "user" },
     { email: "fritziecabrerasiador@gmail.com", password: "09318980224", role: "user" },
