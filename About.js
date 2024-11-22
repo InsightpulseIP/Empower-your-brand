@@ -1,22 +1,45 @@
 document.addEventListener("DOMContentLoaded", function () {
-    function addVisibilityObserver(selector, threshold) {
-        const elements = document.querySelectorAll(selector);
+    const sections = document.querySelectorAll(".section-container");
 
-        const observer = new IntersectionObserver(function (entries) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, { threshold: threshold });
-
-        elements.forEach(function (element) {
-            observer.observe(element);
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
         });
-    }
+    }, { threshold: 0.1 });
 
-    addVisibilityObserver(".section-container", 0.1);
-    addVisibilityObserver(".footer", 0.1);
-    addVisibilityObserver(".image-placeholder", 0.2);
+    sections.forEach(section => {
+        observer.observe(section);
+    });
 });
+document.addEventListener("DOMContentLoaded", function () {
+    const footer = document.querySelector(".footer");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    observer.observe(footer);
+});
+document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".image-placeholder");
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    images.forEach(image => observer.observe(image));
+});
+
